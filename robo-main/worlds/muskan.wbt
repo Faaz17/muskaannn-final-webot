@@ -1,0 +1,86 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/samples/curriculum/protos/Obstacle.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puckGroundSensors.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.59328696366193 0.5925456813862056 0.5448854872533906 2.1448315323680456
+  position 0.15316324278506077 0.3017546468859804 3.5690982703912124
+}
+TexturedBackground {
+}
+E-puck {
+  hidden position_0_0 30565.700495144873
+  hidden position_0_1 32601.309801383537
+  hidden linearVelocity_0 0.057933146577325706 0.014048451166572046 -8.292427235926556e-05
+  hidden angularVelocity_0 0.008112823935798687 -0.013487168054649966 -0.07478320263585009
+  hidden rotation_1 0 1 0 4.287161023363924
+  hidden linearVelocity_1 0.05998649059594799 0.013902122591627042 1.8679691393871322e-05
+  hidden angularVelocity_1 -0.6973341740798605 2.9946740208897005 -0.08077105073266191
+  hidden rotation_2 0 1 0 4.144427735842336
+  hidden linearVelocity_2 0.05598284474544486 0.01418958124093741 -2.9355207226524307e-05
+  hidden angularVelocity_2 -0.7076776518365315 2.8078213859462213 -0.0448532368145996
+  translation 0.060334830293229134 -0.16195469679182556 -8.772564531433005e-05
+  rotation -0.00031691611785106873 -0.005927804866758029 -0.9999823801915891 -0.22816289969934012
+  controller "muskaan"
+  controllerArgs [
+    ""
+  ]
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+RectangleArena {
+  translation 0.01 0 0
+  floorSize 2.2 1.8
+  floorTileSize 2.2 1.8
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../robo-main/robo/circuit_line_lab1.jpg"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+      filtering 1
+    }
+    roughness 1
+    metalness 0
+  }
+  wallThickness 0.025
+  wallHeight 0.05
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 3
+  location 0 0 1
+}
+TexturedBackgroundLight {
+}
+WoodenBox {
+  translation -0.258994 0.219837 0.05
+  rotation 0 0 1 0.261794
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.0824319 -0.262034 0.05
+  rotation 0 0 1 1.30899
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.542085 -0.47837 0.05
+  rotation 0 0 1 1.30899
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+Obstacle {
+  translation -0.41 0.61 0.025
+}

@@ -1,0 +1,80 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/samples/curriculum/protos/Obstacle.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puckGroundSensors.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.5773505470540534 -0.5773513103384006 -0.5773489501739111 4.18878221577798
+  position 6.65793647489088e-05 3.0112231246270937e-06 2.683853911279702
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 3
+  location 0 0 1
+}
+RectangleArena {
+  floorSize 2.2 1.8
+  floorTileSize 2.2 1.8
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../../circuit_line_lab1.jpg"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+      filtering 1
+    }
+    roughness 1
+    metalness 0
+  }
+  wallThickness 0.025
+  wallHeight 0.05
+}
+WoodenBox {
+  translation 0.63 -0.86 0.04
+  name "wooden box(3)"
+  size 0.08 0.08 0.08
+}
+WoodenBox {
+  translation -0.325464 0.423168 0.04
+  rotation 0 0 -1 1.6135653071795861
+  name "wooden box(1)"
+  size 0.08 0.08 0.08
+}
+WoodenBox {
+  translation -0.17 -0.145 0.04
+  rotation 0 0 1 -2.3989653071795862
+  name "wooden box(2)"
+  size 0.08 0.08 0.08
+}
+Obstacle {
+  translation 0.05 -0.25 0.025
+}
+Obstacle {
+  translation 0.215 -0.19 0.025
+  name "obstacle(1)"
+}
+E-puck {
+  hidden position_0_0 1276.3931621607946
+  hidden position_0_1 1673.9429464678874
+  hidden linearVelocity_0 0.005564666206366671 -0.019263055988458597 4.567329889469234e-06
+  hidden angularVelocity_0 0.0032414939934855107 0.0009718514245605579 3.0164317814190822e-05
+  hidden rotation_1 0 -1 0 5.376640503840996
+  hidden linearVelocity_1 0.0055617737802830846 -0.019281424725245234 4.0119401006062315e-06
+  hidden angularVelocity_1 0.9640880193132506 0.2780531660427811 7.990114344724741e-05
+  hidden rotation_2 0 1 0 2.6156547581173926
+  hidden linearVelocity_2 0.0055776453779515876 -0.019276957547931163 4.122218841798956e-06
+  hidden angularVelocity_2 0.9638382289832003 0.2789204718518128 0.00022095073259303932
+  translation -0.6844516386205137 0.7052515575246697 -6.377049978181781e-05
+  rotation -0.0009785877121755969 -0.0013105215313543373 -0.9999986624488083 1.2903751660308387
+  controller "my_controller"
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
